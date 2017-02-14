@@ -1,0 +1,27 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data class=".ContactBinding">
+    <!--默认情况下，Binding类的命名是基于所述layout文件的名称，用大写开头，除去下划线（_）以及（_）后的第一个字母大写，然后添加“Binding”后缀。这个类将被放置在一个模块封装包里的databinding封装包下。例如，所述layout文件contact_item.xml将生成ContactItemBinding。如果模块包是com.example.my.app，那么它将被放置在com.example.my.app.databinding。-->
+        <variable
+            name="contact"
+            type="com.databinding.lenny.myapplication.model.Contact" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="@{contact.tel}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="@{contact.address}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</layout>
+
+
